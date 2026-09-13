@@ -27,6 +27,8 @@ jobs:
         run: rm -rf .buildozer/
 
       - name: Build with Buildozer
+        env:
+          PIP_NO_BINARY: charset_normalizer
         run: |
           yes | buildozer -v android debug
 
